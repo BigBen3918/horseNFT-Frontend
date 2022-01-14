@@ -1,0 +1,143 @@
+.center {
+    text-align: center !important;
+}
+
+.align_center {
+    margin: auto;
+}
+
+
+.space_top {
+    margin-top: 20px !important;
+}
+
+.space {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* cyan font*/
+.x_font_y_1 {
+    color: cyan;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.x_font_y_2 {
+    color: cyan;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.x_font_y_3 {
+    color: cyan;
+    font-size: 60px;
+}
+
+.x_font_y_4 {
+    color: cyan;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* white font*/
+.x_font_w_1 {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.x_font_w_2 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.x_font_w_3 {
+    color: white;
+    font-size: 30px !important;
+}
+
+.x_font_w_4 {
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* green font*/
+.x_font_g_4 {
+    color: rgb(20, 174, 20);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.x_font_p_4 {
+    color: rgb(88, 49, 194);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.x_font_f_5 {
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/**/
+.overflow_card {
+    word-break: break-all
+}
+
+
+@media screen and (max-width: 600px) {
+    .x_font_y_1 {
+        color: cyan;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .x_font_y_2 {
+        color: cyan;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .x_font_y_3 {
+        color: cyan;
+        font-size: 40px;
+    }
+
+    .x_font_y_4 {
+        color: cyan;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+
+    /* white font*/
+    .x_font_w_1 {
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .x_font_w_2 {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .x_font_w_3 {
+        color: white;
+        font-size: 20px;
+    }
+
+    .x_font_w_4 {
+        color: white;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+}

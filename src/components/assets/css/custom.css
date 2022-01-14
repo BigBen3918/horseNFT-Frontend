@@ -1,0 +1,305 @@
+/* Begin Header Style */
+.logo {
+	cursor: pointer;
+}
+
+.logo img {
+	width: 30%;
+	height: 30%;
+	cursor: pointer;
+	position: left;
+}
+
+.logoName {
+	color: white !important;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.menu {
+	color: white;
+	font-size: 150%;
+}
+
+.menubutton {
+	font-family: sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	transition: all 1s;
+}
+
+.menubutton:hover {
+	color: #ffa94d;
+}
+
+.connectbutton {
+	outline: 0;
+	border: 0;
+	color: white;
+	background: #018127;
+	border: 2px solid #018127;
+	padding: 3% 8%;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.connectbutton:hover {
+	box-shadow: 0px 0px 40px #018127;
+}
+
+/* End Header Style */
+
+.mainTitle {
+	padding-top: 300px;
+	padding-bottom: 300px;
+	padding-left: 30px;
+	text-align: left;
+}
+
+.mainTitle>h1 {
+	color: cyan;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.mainTitle>h1>b {
+	color: white;
+
+}
+
+.tokenButton {
+	outline: 0;
+	border: 0;
+
+	font-size: 35px;
+	font-weight: 700;
+	text-align: center;
+	color: white;
+	background: #018127;
+	border: 2px solid #018127;
+
+	padding: 1.5% 10%;
+	margin-top: 30px !important;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: block;
+	width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+	.tokenButton {
+		width: 90%;
+	}
+}
+
+/* End Part1 Style */
+
+
+
+/* Begin Part2 Style */
+.part2 {
+	background-image: linear-gradienthsla(#4939b4, #15043a);
+}
+
+.startButton {
+	outline: 0;
+	border: 0;
+	color: white;
+	font-size: 100%;
+	background: #018127;
+	border: 2px solid #018127;
+	padding: 1.5% 10%;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.smalltitle {
+	color: rgb(61, 255, 43);
+}
+
+.bigtitle {
+	color: cyan;
+}
+
+.content {
+	color: white;
+}
+
+/* Eng Part2 Style */
+
+
+
+/* Begin Part3 Style */
+.roadmap_card {
+	padding: 20px;
+	background: linear-gradient(to bottom, rgb(50, 30, 175), rgb(53, 34, 179), rgb(53, 34, 179), rgba(0, 0, 0, 0%));
+	border-radius: 20px;
+	min-height: 400px;
+}
+
+@media screen and (max-width: 600px) {
+
+	.roadmap_card {
+		width: 80vw;
+	}
+}
+
+
+
+.img-container {
+	text-align: center;
+}
+
+.img-container>img {
+	width: 50px;
+}
+
+
+
+
+/* End Part3 Style */
+
+
+
+/* Begin Footer Style */
+
+
+.contactSet {
+	display: flex;
+	border: 1px solid white;
+	color: white;
+	align-items: center;
+	text-align: center;
+}
+
+.contactAddress {
+	color: white;
+	padding: 10px;
+	border: none;
+	outline: none;
+	height: 70px;
+	background-color: transparent;
+	outline: 0;
+	border: 0;
+	width: 100%;
+}
+
+.notifyButton {
+	border: none;
+	outline: none;
+	height: 70px;
+	background: green;
+	font-weight: 700;
+	text-align: center;
+	padding: 0.5%;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: block;
+	width: 40%;
+}
+
+/* End Footer Style */
+
+
+
+/* Other Style */
+.space-single {
+	height: 20px;
+}
+
+.space-double {
+	height: 40px;
+}
+
+.space-third {
+	height: 60px;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.css-1oqqzyl-MuiContainer-root {
+	max-width: 1400px !important;
+}
+
+/*  background */
+.header_container {
+	background-image: url("../img/toppicture.png");
+	background-size: cover;
+}
+
+.footer_Container {
+	background-image: url("../img/bottompicture.png");
+	background-size: cover;
+}
+
+/* token section */
+/*coinlogo img style*/
+.center_container {
+	width: 86%;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.coinlogo {
+	margin: 30px;
+	width: 50%;
+}
+
+.f_logo_img {
+	width: 10%;
+
+}
+
+/* -------------------------------------PRESALE PAGE-------------------------------------- */
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+.saleBlock {
+	text-align: center;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 50%), transparent);
+	padding: 20px;
+	padding-right: 30px;
+	padding-bottom: 10%;
+	border-radius: 20px;
+}
+
+.buyButton {
+	outline: 0;
+	border: 0;
+
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+	color: white;
+	background: #018127;
+	border: 3px solid #018127;
+
+	padding: 0.5% 0;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+	width: 300px;
+}
+
+.buyButton:hover {
+	color: #018127;
+	background: #ddd;
+}

@@ -1,0 +1,6 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #130139 !important;
+    z-index: -2;
+}
