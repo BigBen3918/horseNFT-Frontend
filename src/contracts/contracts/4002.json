@@ -1,6 +1,6 @@
 {
     "token": {
-        "address": "0x1A03b9d9C8F29217a078C8330b06FbD480c81C5E",
+        "address": "0x6Df11937e4254F4bAAB8F0c13cec8d4bED92b8cc",
         "abi": [
             {
                 "inputs": [
@@ -304,7 +304,7 @@
         ]
     },
     "presale": {
-        "address": "0x6aeC0cBcca6a1067D91D04D3d392EC37E5aCf5e2",
+        "address": "0x37068cb6B66E0AFB18363e9f841AA20912DE9B78",
         "abi": [
             {
                 "inputs": [
