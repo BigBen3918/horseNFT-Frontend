@@ -9,10 +9,10 @@ import "../components/assets/css/custom.css";
 
 function Routes() {
   return (
-      <BrowserRouter>
-          <Route exact path="/" component={Main} />
-          <Route exact path="/defi" component={Presale} />
-      </BrowserRouter>
+		<BrowserRouter>			
+			<Route exact path="/" component={Main} />
+			<Route exact path="/defi" component={Presale} />
+		</BrowserRouter>
   );
 }
 

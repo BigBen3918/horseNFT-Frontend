@@ -19,6 +19,13 @@
 .menu {
 	color: white;
 	font-size: 150%;
+	transition:all .5s;
+}
+.everycursor{
+	cursor: default
+}
+.menu:hover{
+		color: rgb(0, 195, 255);
 }
 
 .menubutton {
@@ -136,10 +143,38 @@
 
 /* Begin Part3 Style */
 .roadmap_card {
+	position: relative;
 	padding: 20px;
-	background: linear-gradient(to bottom, rgb(50, 30, 175), rgb(53, 34, 179), rgb(53, 34, 179), rgba(0, 0, 0, 0%));
 	border-radius: 20px;
 	min-height: 400px;
+    border-radius: 0.3em;
+	background-image:linear-gradient(to bottom,rgb(50, 30, 175), rgb(53, 34, 179), rgb(53, 34, 179), rgba(0, 0, 0, 0));
+    backface-visibility: hidden;
+    z-index: 1;
+	border-radius: 20px;
+	
+}
+.roadmap_card:after{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.3em;
+	border-radius: 20px;
+	background-image:linear-gradient(to top,rgb(50, 30, 175), rgb(53, 34, 179), rgb(53, 34, 179), #130139);
+	transition: opacity .5s ease-out;
+	z-index: 2;
+	opacity: 0;
+
+}
+.roadmap_card:hover:after {
+  opacity: 1;
+}
+.roadmap_card div {
+  position: relative;
+  z-index: 3;
 }
 
 @media screen and (max-width: 600px) {
@@ -189,10 +224,9 @@
 	width: 100%;
 }
 
-.notifyButton {
+/* .notifyButton {
 	border: none;
 	outline: none;
-	height: 70px;
 	background: green;
 	font-weight: 700;
 	text-align: center;
@@ -201,7 +235,38 @@
 	transition: all 0.3s;
 	display: block;
 	width: 40%;
+} */
+.btn-2 {
+	text-align: center;
+	display: inline-block;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	letter-spacing: 2px;
+	position:relative;
+	overflow:hidden;
+	width: 40%;
+	font-weight: 700;
+	padding: 3.4%;
+	background-color: green;
 }
+
+.btn-2:before {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 100%;
+  background : #fff;
+  left: 0;
+  top: -20%;
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.btn-2:hover:before {
+  top: 100%;
+}
+
 
 /* End Footer Style */
 
@@ -303,3 +368,167 @@
 	color: #018127;
 	background: #ddd;
 }
+
+
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation-1{
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  margin-left: 0px;
+  /* margin-top: 200px; */
+  animation: ring 2s infinite;
+}
+@keyframes ring {
+  0% {
+    width: 320px;
+    height: 320px;
+    opacity: 1;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+.pungright{
+	content: '';
+	width: 100px; height: 100px;
+	border-radius: 100%;
+	border: 6px solid #00FFCB;
+	position: absolute;
+	z-index: -1;
+	margin-left: 0px;
+	animation: ring 2s infinite;
+	animation-delay: 1s;
+}
+.animation-2{
+  content: '';
+  width: 400px; height: 400px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  margin-left: 0px;
+  /* margin-top: 200px; */
+  animation: ring1 3s linear 1.5s infinite;
+}
+@keyframes ring1 {
+  0% {
+    width: 450px;
+    height: 450px;
+    opacity: 1;
+  }
+  50% {
+			width: 600px;
+			height: 600px;
+			opacity: 1;
+		}
+  100% {
+    width: 450px;
+    height: 450px;
+    opacity: 1;
+  }
+}
+.imglotation{
+	animation:lotation 3s infinite;
+}
+@keyframes lotation{
+	0%{
+		transform: scale(0.7)
+	}
+	50%{
+		transform: scale(1)
+	}
+	100%{
+		transform: scale(0.7)
+
+	}
+}
+
+@media screen and (max-width:375px) {
+	.pungright{
+		content: '';
+		width: 100px; height: 100px;
+		border-radius: 100%;
+		border: 3px solid #00FFCB;
+		position: absolute;
+		z-index: -1;
+		margin-left: 0px;
+		animation: ring 2s infinite;
+		animation-delay: 1s;
+	}
+	.animation-1{
+		content: '';
+		width: 50px; height: 50px;
+		border-radius: 100%;
+		border: 3px solid #00FFCB;
+		position: absolute;
+		z-index: -1;
+		margin-left: 0px;
+		/* margin-top: 200px; */
+		animation: ring 2s infinite;
+	}
+	@keyframes ring {
+		0% {
+			width: 150px;
+			height: 150px;
+			opacity: 1;
+		}
+		100% {
+			width: 250px;
+			height: 250px;
+			opacity: 0;
+		}
+	}
+	.animation-2{
+		content: '';
+		width: 400px; height: 400px;
+		border-radius: 100%;
+		border: 3px solid #00FFCB;
+		position: absolute;
+		z-index: -1;
+		margin-left: 0px;
+		/* margin-top: 200px; */
+		animation: ring1 3s infinite;
+	}
+	@keyframes ring1 {
+		0% {
+			width: 200px;
+			height: 200px;
+			opacity: 1;
+		}
+		50% {
+			width: 270px;
+			height: 270px;
+			opacity: 1;
+		}
+		100% {
+			width: 200px;
+			height: 200px;
+			opacity: 0;
+		}
+	}
+	@keyframes lotation{
+		0%{
+			transform: scale(1)
+		}
+		50%{
+			transform: scale(0.7)
+		}
+		100%{
+			transform: scale(1)
+
+		}
+	}
+}
+

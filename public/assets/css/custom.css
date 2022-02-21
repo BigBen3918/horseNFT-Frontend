@@ -4,3 +4,13 @@ body {
     background-color: #130139 !important;
     z-index: -2;
 }
+#style-3::-webkit-scrollbar
+{
+	width: 4px;
+	background: linear-gradient(rgba(193,241,185,1) 0%,rgba(3,6,93,1) 100%);
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #6d6a6d;
+}

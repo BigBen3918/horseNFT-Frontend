@@ -76,6 +76,7 @@ export default function Header() {
 	};
 
 	const onConnect = () => {
+		console.log(wallet);
 		if (wallet.status !== "connected") {
 			wallet.connect().catch((err) => {
 				alert("please check metamask!");
@@ -101,7 +102,7 @@ export default function Header() {
 					spacing={5}>
 					<Grid item xl={3} lg={3} md={3} sm={12} className="logo">
 						<Item>
-							<img
+							<img draggable="false"
 								src={Logo}
 								className="logo-img noselect"
 								alt="NoImg"
@@ -131,7 +132,7 @@ export default function Header() {
 									className="connectbutton noselect x_font_w_3"
 									style={{ textTransform: "none" }}
 									onClick={disconnect}>
-									<img
+									<img draggable="false"
 										src={imgMetamask}
 										alt="wallet"
 										style={{
@@ -163,7 +164,7 @@ export default function Header() {
 										</div>
 									) : (
 										<div>
-											<img
+											<img draggable="false"
 												src={imgMetamask}
 												alt="wallet"
 												style={{
@@ -192,7 +193,7 @@ export default function Header() {
 							justifyContent="center"
 							alignItems="center">
 							<Grid item sm={2} xs={2}>
-								<img
+								<img draggable="false"
 									src={Logo}
 									className="mobile-logo-img noselect"
 									alt="NoImg"
@@ -247,7 +248,7 @@ export default function Header() {
 														textTransform: "none",
 													}}
 													onClick={disconnect}>
-													<img
+													<img draggable="false"
 														src={imgMetamask}
 														alt="wallet"
 														style={{
@@ -282,7 +283,7 @@ export default function Header() {
 														</div>
 													) : (
 														<div>
-															<img
+															<img draggable="false"
 																src={imgMetamask}
 																alt="wallet"
 																style={{

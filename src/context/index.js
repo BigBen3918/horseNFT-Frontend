@@ -4,9 +4,8 @@ import React, {
     useReducer,
     useMemo,
     useCallback,
-    useEffect,
-} from "react";
-
+    useEffect, 
+} from "react"; 
 import { ethers } from "ethers";
 import { useWallet } from "use-wallet";
 import {
@@ -21,6 +20,7 @@ const BlockchainContext = createContext();
 export function useBlockchainContext() {
     return useContext(BlockchainContext);
 }
+
 
 function reducer(state, { type, payload }) {
     return {
@@ -40,7 +40,7 @@ const INIT_STATE = {
 export default function Provider({ children }) {
     const wallet = useWallet();
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
-
+ 
     // set signer balance
     useEffect(() => {
         const getSigner = async () => {
@@ -60,7 +60,7 @@ export default function Provider({ children }) {
                 });
             }
         };
-        getSigner();
+        getSigner(); 
     }, [wallet.status]);
 
     useEffect(() => {
@@ -76,7 +76,7 @@ export default function Provider({ children }) {
             if (wallet.status === "connected") {
                 checking();
             }
-        }
+        } 
     }, [state.signer]);
 
     const checkBalance = async () => {
@@ -86,11 +86,10 @@ export default function Provider({ children }) {
             var userAddress = await state.signer.getAddress();
             var tokenBalance = fromBigNum(await signedTokenContract.balanceOf(userAddress), 18);
 
-            var ethBalance = fromBigNum(await state.provider.getBalance(userAddress), 18);
-
+            var ethBalance = fromBigNum(await state.provider.getBalance(userAddress), 18); 
             dispatch({
                 type: "tokenBalance",
-                payload: tokenBalance
+                payload: ethBalance * state.price
             });
 
             dispatch({
@@ -103,7 +102,7 @@ export default function Provider({ children }) {
                 ethBalance
             }
         } catch (err) {
-            console.log(err);
+           // console.log(err);
             NotificationManager.error("Check balance error");
 
             dispatch({
@@ -141,21 +140,27 @@ export default function Provider({ children }) {
     }
 
     useEffect(() => {
-        getTerms();
+        getTerms(); 
     }, []);
 
     //actions
-    const buy = async (amount) => {
-        console.log(amount);
+    const buy = async (amount) => {  
         try {
-            var signedPresaleContract = presaleContract.connect(state.signer);
+            if(amount>state.ethBalance){
+                NotificationManager.success("ETH Balance error");    
+                return;
+            }
+            
+            var signedPresaleContract = presaleContract.connect(state.signer); 
             var tx = await signedPresaleContract.buy({ value: toBigNum(amount, 18) });
+            
             await tx.wait();
             NotificationManager.success("Buy Success");
+            checkBalance();   
         } catch (err) {
             console.log(err);
-            NotificationManager.error("Buy error");
-        }
+            NotificationManager.error("Buy error");  
+        } 
     }
 
     return (

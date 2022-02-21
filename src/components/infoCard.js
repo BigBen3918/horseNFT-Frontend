@@ -13,9 +13,9 @@ const InfoCard = (props) => {
 
 	return (
 		<div className="roadmap_card space_top">
-			<div className="x_font_w_2 space_top">{title}</div>
-			<div className="x_font_y_4 space">{subtitle}</div>
-			<div className="x_font_w_4 overflow_card">{content}</div>
+			<div className="everycursor x_font_w_2 space_top">{title}</div>
+			<div className="everycursor x_font_y_4 space">{subtitle}</div>
+			<div className="everycursor x_font_w_4 overflow_card">{content}</div>
 		</div>
 	);
 };
